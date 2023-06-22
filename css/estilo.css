@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url("/img/fondo4.jpg");
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.container {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:2fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      "footer footer footer";
+      height: 100vh;
+  }
+  
+
+/* cards clima*/
+
+h1{
+    text-align: center;
+    color: white;
+    margin: 50px;
+
+}
+
+
+footer {
+    grid-area: footer;
+    place-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    min-height: calc(100vh-50px-100px);
+    margin-bottom: 2rem;
+}
+
+.tarjetaclima {
+    width: 400px;
+    height: 200px;
+    border-radius: 6px;
+    background: rgba(158, 222, 236, 0.74);
+    background: linear-gradient(90deg, rgba(158, 222, 236, 0.637) 0%, rgba(208, 230, 255, 0.699) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 10px 10px rgba(128, 128, 128, 0.514)
+}
+
+
+.imagenestiempo {
+    width: 50px;
+    height: 50px;
+    /***** ANIMACION*/
+    animation: logo 8s linear infinite alternate-reverse;
+
+
+}
+
+@keyframes logo {
+    from {
+        transform: translateX(-150px);
+    }
+
+    to {
+        transform: translateX(150px);
+    }
+
+}
+
+
+a {
+    text-decoration: none;
+    color: rgba(240, 248, 255, 0.726);
+    font-weight: 700;
+    text-transform: uppercase;
+
+
+}
+
+
+/*****responsive****/
+
+
+@media screen and (min-width:600px) {
+    .container {  display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.6fr 0.4fr 2fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          ". . ."
+          ". . ."
+          "footer footer footer";
+      }
+      body{
+        background-image: url(/img/fondo2.jpg);
+      }
+      footer { grid-area: footer;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+     }
+      
+}
+
+
+@media screen and (min-width:900px) {
+    .container {  display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.6fr 0.4fr 2fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          ". . ."
+          ". . ."
+          "footer footer footer";
+      }
+      body{
+        background-image: url(/img/fondo.jpg);
+      }
+      footer { grid-area: footer;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+     }
+      
+}
