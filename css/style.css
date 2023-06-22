@@ -94,7 +94,7 @@ a {
 }
 
 
-/*****responsive****/
+/*****tablet****/
 
 
 @media screen and (min-width:600px) {
@@ -120,6 +120,9 @@ a {
 }
 
 
+
+/*****escritotio****/
+
 @media screen and (min-width:900px) {
     .container {  display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -131,9 +134,13 @@ a {
           ". . ."
           "footer footer footer";
       }
+
       body{
         background-image: url(/img/fondo.jpg);
+        background-size:cover;
+  
       }
+
       footer { grid-area: footer;
         display: flex;
         flex-direction: row;
